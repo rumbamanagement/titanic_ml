@@ -15,7 +15,7 @@ Titanic: Machine Learning from Disaster is one of the popular ML challenges you 
 # Data Preprocessing
 * The missing values in the train data are identified and analyzed.
 * I have dropped few variables from the dataset as it contains the missing values. Cabin variable have 687 missing values which is 77.10 percent of total data set. I assume it would be better to delete such numbers of the missing values. Age variable have 177 missing values and it would be appropriate if it is replaced by median value. Embarked variable only contains 2 missing values and wouldn't be big deal if we delete those 2 missing values.
-* I have divided Ticket variable into ticket with numbers and letters. numeric_ticket gives boolean value; 1 shows value is numeric and 0 is non-numeric. ticket_letters groups tickets into ticket with letters.
+* I have divided Ticket variable into ticket with numbers and letters. numeric_ticket gives boolean value; 1 shows value is numeric and 0 is non-numeric.
 * We have 659 tickets which have numbers only and 230 tickets which have letters.
 * Simple Feature scaling, one of the data normalization methods, is used here to normalize Age and Fare variables into a similar range; 0 to 1.
 * We follow the same approach to our test dataset in dealing with the missing values and data normalization.
@@ -39,7 +39,6 @@ Titanic: Machine Learning from Disaster is one of the popular ML challenges you 
 
 # Model Building
 * Features Encoding; Convering of categorical variables into numerical variables by creating their dummy variables
-* The number of columns increased to 57. Label-Encoder is used to convert text or categorical data into numerical data which the model expects and perform better with.
 * Let's split our data into train set and test set.
 * Here, I have used three models for this classification project. They are Decision Tree, K Nearest Neighbors (KNN) and Logistic Regression.
 
@@ -51,5 +50,3 @@ Titanic: Machine Learning from Disaster is one of the popular ML challenges you 
 # References
 
 https://www.kaggle.com/kenjee/titanic-project-example : I retrieved some code from this notebook. I was not sure what to do with Ticket feature and didn't want to delete it as I think it could be one of the determining factors for the prediction project.
-
-https://github.com/mrdbourke/your-first-kaggle-submission/blob/master/kaggle-titanic-dataset-example-submission-workflow.ipynb : I found this notebook very informative and learned some Python packages. I learned about Label Encoder and how this simple approach can help to convert categorical variables into numerical variables.
